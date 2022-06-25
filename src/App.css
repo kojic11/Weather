@@ -1,0 +1,24 @@
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+body{
+    width:95%;
+    background-color: rgba(0, 0, 0, 0.8);
+    background: -moz-linear-gradient(to top, #21d190 0%, #5b63d6 74%);
+    background-image: linear-gradient(to top, #21d190 0%, #5b63d6 74%);
+    background-attachment:fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.noentry{
+    color: white;
+    text-align: left;
+    margin: 10% auto;
+}
+::placeholder{
+    color: rgb(255, 255, 255);
+    opacity: 1;
+}
