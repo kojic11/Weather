@@ -19,7 +19,7 @@ class App extends React.Component {
     .then(response => response.json())
     .then(weather=>{this.setState({info: weather})
       return weather}) 
-    .then(data => {fetch(`https://api.airvisual.com/v2/nearest_city?lat=${data.coord.lat}&lon=${data.coord.lon}&key=7adbfbd0-8648-4629-983a-9e113af3cbd1`)
+    .then(data => {fetch(`https://api.airvisual.com/v2/nearest_city?lat=${data.coord.lat}&lon=${data.coord.lon}&key='API'`)
                       .then(response =>response.json())
                       .then (air=>{this.setState({pollution: air})
                         return air;
@@ -33,7 +33,7 @@ class App extends React.Component {
  fetchBG = () => { 
   let lat = this.state.info.coord.lat;
   let lon = this.state.info.coord.lon;
-  fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=8b0a3e4a17c7a7fdeab0cb894005a6c8&lat=${lat}&lon=${lon}&format=json&nojsoncallback=1&sort=interestingness-desc&accuracy=11&geo_context=2&content_type=1`)
+  fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key='API'&lat=${lat}&lon=${lon}&format=json&nojsoncallback=1&sort=interestingness-desc&accuracy=11&geo_context=2&content_type=1`)
   .then(response =>response.json())
   .then(bg =>{this.setState({bg:bg})
     return bg;  
@@ -43,7 +43,7 @@ class App extends React.Component {
   ifEnter = (event) =>{
     if (event.key === 'Enter') {
       let cityName=this.state.city;
-      const api = '2a121c1856b04cacb99253ce1456ca27';
+      const api = 'API';
       this.fetchData(cityName,api);
       setTimeout(() => {
         this.fetchBG();
