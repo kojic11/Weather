@@ -1,6 +1,6 @@
 # Weather application
 
-Build using ReactJS.
+Build using ReactJS.<br>
 Displays current weather information including air quality and background picture based on location inputed by user.
 
 ### How it works
